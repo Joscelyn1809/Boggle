@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class BogglePlay {
 
     /*
-    * Aquí se modela el juego Boggle
+    * Aquí se modela el juego Boggle.
      */
     public static void main(String[] args) {
 
