@@ -27,11 +27,6 @@ public class Jugador {
         palabrasEncontradas.add(palabra);
     }
 
-    @Override
-    public String toString() {
-        return "" + palabrasEncontradas;
-    }
-
     /*
     * Sacamos el puntaje al final del juego para darselo a conocer al jugador
     * donde una palabra de 5 letras vale 5 puntos, y una palabra con más, vale 

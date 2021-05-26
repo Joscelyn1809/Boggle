@@ -31,7 +31,8 @@ public class BoggleBox {
     }
 
     /*
-    * Crea los dados solamenta para el Boggle Box en inglés, en una matriz de dados de Boggle de 5x5, y la regresa
+    * Crea los dados solamenta para el Boggle Box en inglés, en una matriz de 
+    * dados de Boggle de 5x5, y la regresa
      */
     public DadoBoggle[][] crearBoggleBoxIngles() {
 
@@ -65,7 +66,8 @@ public class BoggleBox {
     }
 
     /*
-    * Crea los dados solamenta para el Boggle Box en español, en una matriz de dados de Boggle de 5x5, y la regresa
+    * Crea los dados solamenta para el Boggle Box en español, en una matriz de 
+    * dados de Boggle de 5x5, y la regresa
      */
     public DadoBoggle[][] crearBoggleBoxEspañol() {
         dados[0][0] = new DadoBoggle("QBZJXL");
