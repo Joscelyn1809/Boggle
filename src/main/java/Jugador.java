@@ -47,6 +47,9 @@ public class Jugador {
             } else if (palabra.length() > 5) {
                 puntaje += 10;
                 System.out.println(palabra + "\tPuntos = 10");
+            } else if(palabra.length() < 5){
+                puntaje += 3;
+                System.out.println(palabra + "\tPuntos = 3");
             }
 
         }

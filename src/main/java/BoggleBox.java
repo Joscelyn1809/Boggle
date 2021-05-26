@@ -134,29 +134,33 @@ public class BoggleBox {
     * las String introducidas con el usuario con las disponibles.
      */
     public ArrayList<String> buscarPalabras() {
-        for (int i = 0; i < 5; i++) { //Busca palabras verticalmente
-            StringBuffer sb = new StringBuffer();
-            for (int j = 0; j < 5; j++) {
-                sb = sb.append(dados[i][j].getCara());
-            }
-            palabras.add(sb.toString());
-            palabras.add(invertirPalabra(sb.toString())); //Añade al ArrayList las mismas palabras pero invertidas
-        }
-
         for (int i = 0; i < 5; i++) { //Busca palabras horizontalmente
             StringBuffer sb = new StringBuffer();
             for (int j = 0; j < 5; j++) {
-                sb = sb.append(dados[j][i].getCara());
+                sb = sb.append(dados[i][j].getCara());
+                if (sb.toString().length() >= 3) { //Para que agregue también palabras de 3 y 4 letras
+                    palabras.add(sb.toString());
+                    palabras.add(invertirPalabra(sb.toString()));
+                }
             }
-            palabras.add(sb.toString());
-            palabras.add(invertirPalabra(sb.toString())); //Añade al ArrayList las mismas palabras pero invertidas
+        }
+
+        for (int i = 0; i < 5; i++) { //Busca palabras verticalmente
+            StringBuffer sb = new StringBuffer();
+            for (int j = 0; j < 5; j++) {
+                sb = sb.append(dados[j][i].getCara());
+                if (sb.toString().length() >= 3) { //Para que agregue también palabras de 3 y 4 letras
+                    palabras.add(sb.toString());
+                    palabras.add(invertirPalabra(sb.toString()));
+                }
+            }
         }
         return palabras;
     }
 
     /*
     * Este método invierte la palabra que se le de.
-    */
+     */
     public String invertirPalabra(String pal) {
         String palInvertida = "";
 
@@ -168,7 +172,7 @@ public class BoggleBox {
 
     /*
     * Para comparar la palabra del usuario con las contenidas en el ArrayList
-    */
+     */
     public boolean comprobarPalabra(String palabra) {
         return palabras.contains(palabra);
     }

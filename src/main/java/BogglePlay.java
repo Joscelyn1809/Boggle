@@ -65,5 +65,7 @@ public class BogglePlay {
         } else { //En otro caso solo imprimimos su puntuación
             System.out.println("\nEl puntaje fue: " + ju.sacarPuntaje());
         }
+        
+        System.out.println(boggleBox.getPalabras());
     }
 }
